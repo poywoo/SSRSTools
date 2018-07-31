@@ -134,7 +134,7 @@ function Sync-RsFolder (
         Write-Verbose "[Sync-RsFolder()] No modified reports to add to reporting server"
     }
     
-    if ($Delete) 
+    if ($Deleted) 
     {
         Write-Verbose "[Sync-RsFolder()] Deleting reports from reporting server..."
 
