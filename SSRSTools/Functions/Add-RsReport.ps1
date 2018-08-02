@@ -28,14 +28,14 @@
     If force is specified it will create the report folder if not existing and overwrite the report if existing.
  
 .EXAMPLE
-    Add-RsReport -rdlFilePath "C:\Scheduled Reports\Report.rdl" -RsFolder "Scheduled Reports" -ReportServerUri "http://[ServerName]:8080/ReportServer" -Force
+    Add-RsReport -rdlFilePath "C:\DBA Reports\Report.rdl" -RsFolder "DBA Reports" -ReportServerUri "http://[ServerName]:8080/ReportServer" -Force
     
     Description
     -----------
-    Uploads Report.rdl to Scheduled Reports folder on the SQL Server Reporting Services Instance at "http://[ServerName]:8080/ReportServer" with overwrite if the file already exists
+    Uploads Report.rdl to DBA Reports folder on the SQL Server Reporting Services Instance at "http://[ServerName]:8080/ReportServer" with overwrite if the file already exists
 
 .EXAMPLE
-    Add-RsReport -rdlFilePath "C:\Scheduled Reports\Report.rdl" -ReportServerUri "http://[ServerName]:8080/ReportServer" -Force
+    Add-RsReport -rdlFilePath "C:\DBA Reports\Report.rdl" -ReportServerUri "http://[ServerName]:8080/ReportServer" -Force
 
     Description
     -----------
@@ -43,11 +43,11 @@
  
 .EXAMPLE
     $Proxy = New-WebServiceProxy -Uri "http://[ServerName]:8080/ReportServer/ReportService2010.asmx" -UseDefaultCredential 
-    Add-RsReport -rdlFilePath "C:\Scheduled Reports\Report.rdl" -RsFolder "Scheduled Reports" -SSRSProxy $Proxy
+    Add-RsReport -rdlFilePath "C:\DBA Reports\Report.rdl" -RsFolder "DBA Reports" -SSRSProxy $Proxy
 
     Description
     -----------
-    Uploads Report.rdl to Scheduled Reports folder through an existing web service proxy $Proxy without overwrite if the file already exists
+    Uploads Report.rdl to DBA Reports folder through an existing web service proxy $Proxy without overwrite if the file already exists
  
 #>
 function Add-RsReport (

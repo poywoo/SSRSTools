@@ -26,33 +26,33 @@
     If not suplied, a new web service proxy object is created from ReportServerUri and ApiVersion parameters.
  
 .EXAMPLE
-    Delete-RsReport -RsFolder "Scheduled Reports" -RsReport "DailyReport" -ReportServerUri "http://[ServerName]:8080/ReportServer" 
+    Delete-RsReport -RsFolder "DBA Reports" -RsReport "DailyReport" -ReportServerUri "http://[ServerName]:8080/ReportServer" 
     
     Description
     -----------
-    Deletes DailyReport from Scheduled Reports folder (/Scheduled Reports/DailyReport) on the SQL Server Reporting Services Instance at "http://[ServerName]:8080/ReportServer"
+    Deletes DailyReport from DBA Reports folder (/DBA Reports/DailyReport) on the SQL Server Reporting Services Instance at "http://[ServerName]:8080/ReportServer"
 
 .EXAMPLE
-    Delete-RsReport -RsFolder "Scheduled Reports" -RsReport "DailyReport.rdl" -ReportServerUri "http://[ServerName]:8080/ReportServer" 
+    Delete-RsReport -RsFolder "DBA Reports" -RsReport "DailyReport.rdl" -ReportServerUri "http://[ServerName]:8080/ReportServer" 
     
     Description
     -----------
-    Deletes DailyReport from Scheduled Reports folder (/Scheduled Reports/DailyReport) on the SQL Server Reporting Services Instance at "http://[ServerName]:8080/ReportServer"
+    Deletes DailyReport from DBA Reports folder (/DBA Reports/DailyReport) on the SQL Server Reporting Services Instance at "http://[ServerName]:8080/ReportServer"
  
 .EXAMPLE
-    Delete-RsReport -RsFolder "Scheduled Reports" -ReportServerUri "http://[ServerName]:8080/ReportServer"
+    Delete-RsReport -RsFolder "DBA Reports" -ReportServerUri "http://[ServerName]:8080/ReportServer"
     
     Description
     -----------
-    Deletes entire Scheduled Reports folder (/Scheduled Reports) on the SQL Server Reporting Services Instance at "http://[ServerName]:8080/ReportServer"
+    Deletes entire DBA Reports folder (/DBA Reports) on the SQL Server Reporting Services Instance at "http://[ServerName]:8080/ReportServer"
     
 .EXAMPLE
     $Proxy = New-WebServiceProxy -Uri "http://[ServerName]:8080/ReportServer/ReportService2010.asmx" -UseDefaultCredential 
-    Delete-RsReport -RsFolder "Scheduled Reports" -SSRSProxy $Proxy
+    Delete-RsReport -RsFolder "DBA Reports" -SSRSProxy $Proxy
     
     Description
     -----------
-    Deletes entire Scheduled Reports folder (/Scheduled Reports) using existing web service proxy $Proxy     
+    Deletes entire DBA Reports folder (/DBA Reports) using existing web service proxy $Proxy     
 #>
 function Delete-RsReport (
     [cmdletbinding()]
