@@ -6,7 +6,7 @@ The PowerShell functions in the SSRSTools/Functions folder are designed to be fl
 
 ## Commands
 
-| cmdlet        | Description   | References    |
+| Function      | Description   | References    |
 | ------------- | ------------- | ------------- |
 | Add-RsReport  | Uploads an .rdl report file to a SQL Report Server | Create-RsWebServiceProxy |
 | Create-RsWebServiceProxy | Creates a web service proxy object to the reporting services soap endpoint, with default credentials | none |
