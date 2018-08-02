@@ -15,11 +15,11 @@ The PowerShell functions in the SSRSTools/Functions folder are designed to be fl
 | Sync-RsFolder | Compares and syncs a folder on SQL Report Server to a local folder | Create-RsWebServiceProxy, Add-RsReport, Delete-RsReport |
 
 ## Examples
-Assume your PowerShell cmdlets are saved in C:\PowerShell\SSRSTools
+Assume they are saved in C:\PowerShell\SSRSTools
 
 **Example 1:** Create a web service proxy and uses it to add DailyOperationsSummary report to the Client Reports folder on report server
 ```
-# . source path to the cmdlet
+# . source
 . C:\PowerShell\SSRSTools\Create-RsWebServiceProxy.ps1
 . C:\PowerShell\SSRSTools\Add-RsReport.ps1
 
@@ -30,7 +30,7 @@ Add-RsReport -rdlFilePath "C:\SSRS Reports\Client Reports\DailyOperationsSummary
 
 **Example 2:** Sync Client Reports folder on report server to local reports in C:\SSRS Reports\Client Reports
 ```
-# . source path to the cmdlet
+# . source
 . C:\PowerShell\SSRSTools\Sync-RsFolder.ps1
 
 # declare variables
