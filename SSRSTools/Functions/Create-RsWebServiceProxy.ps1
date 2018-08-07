@@ -44,9 +44,7 @@ function Create-RsWebServiceProxy (
     {
         $ReportServerUri = $ReportServerUri + "/"
     }
-    $ReportServerUriObj = New-Object System.Uri($ReportServerUri)
-    $RsSoapEndpointUriObj = New-Object System.Uri($ReportServerUriObj, "ReportService$ApiVersion.asmx")
-    $ReportServerUri = $RsSoapEndPointUriObj.ToString()
+    $ReportServerUri = $ReportServerUri + "ReportService$ApiVersion.asmx"
     try 
     {
         Write-Verbose "[Create-RsWebServiceProxy()] Creating Proxy, connecting to : $ReportServerUri"
